@@ -118,8 +118,8 @@ fi
 if [ -z "$TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS" ]; then
     TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
         "vpn 24 $thm_fg default_separator no_sep_bg_color no_sep_fg_color"
-        "wan_ip $thm_gray $thm_fg default_separator no_sep_bg_color no_sep_fg_color right_disable"
-        "lan_ip $thm_gray $thm_fg default_separator no_sep_bg_color no_sep_fg_color left_disable"
+        "wan_ip $thm_bg $thm_fg default_separator no_sep_bg_color no_sep_fg_color right_disable"
+        "lan_ip $thm_bg $thm_fg default_separator no_sep_bg_color no_sep_fg_color left_disable"
         "battery $thm_magenta $thm_bg"
         "date_day $thm_bg $thm_fg default_separator no_sep_bg_color no_sep_fg_color"
         "date $thm_bg $thm_fg · $thm_bg $thm_fg"
