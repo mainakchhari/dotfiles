@@ -1,0 +1,24 @@
+[[language]]
+name = "python"
+language-servers = [ { name = "basedpyright",  except-features = [ "format", "diagnostics" ] }, "ruff" ]
+formatter = { command = "uvx", args = ["sh", "-c", "ruff check --fix - | ruff format -"] }
+auto-format = true
+
+[language-server.ruff]
+command = "ruff"
+args = ["server", "-q", "--preview"]
+
+[language-server.ruff.config.settings.format]
+preview = true
+
+[language-server.basedpyright]
+command = "uv"
+args = ["run", "basedpyright-langserver", "--stdio"]
+config.python.analysis.typeCheckingMode = "off"
+
+[language-server.djlsp]
+command = "djlsp"
+
+[[language]]
+name = "html"
+language-servers = [ "vscode-html-language-server", "djlsp" ]

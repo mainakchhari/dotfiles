@@ -1,0 +1,30 @@
+theme = "monokai"
+
+[editor]
+color-modes = true
+text-width = 88
+true-color = true
+
+[editor.file-picker]
+hidden = false
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.gutters.line-numbers]
+min-width = 1
+
+[editor.indent-guides]
+render = true
+character = "┊"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = []
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "|"

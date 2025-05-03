@@ -1,0 +1,57 @@
+[terminal.shell]
+program = "/opt/homebrew/bin/zsh"
+args = ["-l"]
+
+[general]
+import = ["~/.config/alacritty/themes/themes/monokai.toml"]
+live_config_reload = true
+
+[env]
+TERM = "tmux-256color"
+
+[window]
+title = "iTerminal"
+dynamic_padding = true
+# decorations = "Transparent"
+option_as_alt = "Both"
+
+[font]
+size = 18.0
+
+[font.normal]
+family = "0xProto Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "0xProto Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "0xProto Nerd Font Mono"
+style = "Italic"
+
+[keyboard]
+bindings = [
+    # ⌘ + enter puts window in macOS full screen
+    { key = "Enter", mods = "Command", action = "ToggleFullscreen"},
+    # opt + right and left jump between words
+    { key = "Right", mods = "Alt", chars = "\u001BF" },
+    { key = "Left",  mods = "Alt", chars = "\u001BB" },
+    # ⌘ + d adds a pane to the right (splits window vertically)
+    { key = "D",  mods = "Command", chars = "\u0001\u0025" },
+    # ⌘ + ⇧ + d adds a pane below (splits window horizontally)
+    { key = "D",  mods = "Command|Shift", chars = "\u0001\"" },
+    # ⌘ + w prompts you to close the pane, "y" to confirm
+    { key = "W",  mods = "Command", chars = "\u0001x" },
+    # ⌘ + arrows are for directional navigation around the panes
+    # move down a pane
+    { key = "Down", mods = "Command", chars = "\u0001\u001b[B" },
+    # move up a pane
+    { key = "Up", mods = "Command", chars = "\u0001\u001b[A" },
+     # move left a pane
+    { key = "Left", mods = "Command", chars = "\u0001\u001b[D" },
+    # move right a pane
+    { key = "Right", mods = "Command", chars = "\u0001\u001b[C" },
+    # ⌘ + ⇧ + enter maximizes the pane within the alacritty window
+    { key = "Enter", mods = "Command|Shift", chars = "\u0001z" },
+]
